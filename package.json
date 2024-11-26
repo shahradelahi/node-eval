@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
-    "@sindresorhus/tsconfig": "^6.0.0",
+    "@sindresorhus/tsconfig": "^7.0.0",
     "@types/chai": "^5.0.1",
     "@types/mocha": "^10.0.9",
     "@types/node": "^22.9.0",
