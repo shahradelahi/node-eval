@@ -8,9 +8,9 @@ importers:
 
   .:
     devDependencies:
-      '@ianvs/prettier-plugin-sort-imports':
-        specifier: ^4.4.0
-        version: 4.4.0(prettier@3.3.3)
+      '@shahrad/prettier-config':
+        specifier: ^1.2.2
+        version: 1.2.2(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.5.3))(prettier-plugin-packagejson@2.5.15(prettier@3.5.3))(prettier-plugin-sh@0.15.0(prettier@3.5.3))(prettier@3.5.3)
       '@sindresorhus/tsconfig':
         specifier: ^6.0.0
         version: 6.0.0
@@ -37,7 +37,7 @@ importers:
         version: 10.8.2
       prettier:
         specifier: ^3.3.3
-        version: 3.3.3
+        version: 3.5.3
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(postcss@8.4.49)(tsx@4.19.2)(typescript@5.6.3)
@@ -447,6 +447,10 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
+  '@pkgr/core@0.2.7':
+    resolution: {integrity: sha512-YLT9Zo3oNPJoBjBc4q8G2mjU4tqIbf5CEOORbUUr48dCD9q3umJ3IPlVqOqDakPfd2HuwccBaqlGhN4Gmr5OWg==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
   '@rollup/rollup-android-arm-eabi@4.27.2':
     resolution: {integrity: sha512-Tj+j7Pyzd15wAdSJswvs5CJzJNV+qqSUcr/aCD+jpQSBtXvGnV0pnrjoc8zFTe9fcKCatkpFpOO7yAzpO998HA==}
     cpu: [arm]
@@ -536,6 +540,14 @@ packages:
     resolution: {integrity: sha512-foJM5vv+z2KQmn7emYdDLyTbkoO5bkHZE1oth2tWbQNGW7mX32d46Hz6T0MqXdWS2vBZhaEtHqdy9WYwGfiliA==}
     cpu: [x64]
     os: [win32]
+
+  '@shahrad/prettier-config@1.2.2':
+    resolution: {integrity: sha512-D6yRqGjD9mhdC5cWQkdoatybNmp6eZJZQ1IerFaANQL1pgtNyEasE2yFy3JdDxJRbHcL2GeaI/03tEPchU+Ddw==}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': ^4.4
+      prettier: '>=3.0.0'
+      prettier-plugin-packagejson: ^2.5
+      prettier-plugin-sh: ^0.15
 
   '@sindresorhus/tsconfig@6.0.0':
     resolution: {integrity: sha512-+fUdfuDd/7O2OZ9/UvJy76IEWn2Tpvm2l+rwUoS2Yz4jCUTSNOQQv2PLWrwekt8cPLwHmpHaBpay34bkBmVl2Q==}
@@ -766,6 +778,14 @@ packages:
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
+  detect-indent@7.0.1:
+    resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
+    engines: {node: '>=12.20'}
+
+  detect-newline@4.0.1:
+    resolution: {integrity: sha512-qE3Veg1YXzGHQhlA6jzebZN2qVf6NX+A7m7qlhCGG30dJixrAQhYOsJjsnBjJkCSmuOPpCk30145fr8FV0bzog==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
   diff@5.2.0:
     resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
     engines: {node: '>=0.3.1'}
@@ -858,6 +878,14 @@ packages:
       picomatch:
         optional: true
 
+  fdir@6.4.6:
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -899,6 +927,9 @@ packages:
 
   get-tsconfig@4.8.1:
     resolution: {integrity: sha512-k9PN+cFBmaLWtVz29SkUoqU5O0slLuHJXt/2P+tMVFT+phsSGXGkp9t3rQIqdz0e+06EHNGs3oM6ZX1s2zHxRg==}
+
+  git-hooks-list@4.1.1:
+    resolution: {integrity: sha512-cmP497iLq54AZnv4YRAEMnEyQ1eIn4tGKbmswqwmFV4GBnAqE8NLtWxxdXa++AalfgL5EBH4IxTPyquEuGY/jA==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -983,6 +1014,10 @@ packages:
   is-plain-obj@2.1.0:
     resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
     engines: {node: '>=8'}
+
+  is-plain-obj@4.1.0:
+    resolution: {integrity: sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==}
+    engines: {node: '>=12'}
 
   is-unicode-supported@0.1.0:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
@@ -1088,6 +1123,10 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
+  mvdan-sh@0.10.1:
+    resolution: {integrity: sha512-kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==}
+    deprecated: See https://github.com/mvdan/sh/issues/1145
+
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
@@ -1190,8 +1229,22 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier-plugin-packagejson@2.5.15:
+    resolution: {integrity: sha512-2QSx6y4IT6LTwXtCvXAopENW5IP/aujC8fobEM2pDbs0IGkiVjW/ipPuYAHuXigbNe64aGWF7vIetukuzM3CBw==}
+    peerDependencies:
+      prettier: '>= 1.16.0'
+    peerDependenciesMeta:
+      prettier:
+        optional: true
+
+  prettier-plugin-sh@0.15.0:
+    resolution: {integrity: sha512-U0PikJr/yr2bzzARl43qI0mApBj0C1xdAfA04AZa6LnvIKawXHhuy2fFo6LNA7weRzGlAiNbaEFfKMFo0nZr/A==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      prettier: ^3.0.3
+
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1252,8 +1305,17 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.2:
+    resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   serialize-javascript@6.0.2:
     resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
+
+  sh-syntax@0.4.2:
+    resolution: {integrity: sha512-/l2UZ5fhGZLVZa16XQM9/Vq/hezGGbdHeVEA01uWjOL1+7Ek/gt6FquW0iKKws4a9AYPYvlz6RyVvjh3JxOteg==}
+    engines: {node: '>=16.0.0'}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -1266,6 +1328,13 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  sort-object-keys@1.1.3:
+    resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
+
+  sort-package-json@3.2.1:
+    resolution: {integrity: sha512-rTfRdb20vuoAn7LDlEtCqOkYfl2X+Qze6cLbNOzcDpbmKEhJI30tTN44d5shbKJnXsvz24QQhlCm81Bag7EOKg==}
+    hasBin: true
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -1308,6 +1377,10 @@ packages:
     resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
     engines: {node: '>=10'}
 
+  synckit@0.11.8:
+    resolution: {integrity: sha512-+XZ+r1XGIJGeQk3VvXhT6xx/VpbHsRzsTkGgF6E5RX9TTXD0118l87puaEBZ566FhqblC6U0d4XnubznJDm30A==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
 
@@ -1323,6 +1396,10 @@ packages:
 
   tinyglobby@0.2.10:
     resolution: {integrity: sha512-Zc+8eJlFMvgatPZTl6A9L/yht8QqdmUNtURHaKZLmKBE12hNPSrqNkUp2cs3M/UKmNVVAMFQYSjYIVHDjW5zew==}
+    engines: {node: '>=12.0.0'}
+
+  tinyglobby@0.2.14:
+    resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
     engines: {node: '>=12.0.0'}
 
   to-regex-range@5.0.1:
@@ -1344,6 +1421,9 @@ packages:
 
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   tsup@8.3.5:
     resolution: {integrity: sha512-Tunf6r6m6tnZsG9GYWndg0z8dEV7fD733VBFzFJ5Vcm1FtlXB8xBD/rtrBi2a3YKEV7hHtxiZtW5EAVADoe1pA==}
@@ -1663,14 +1743,14 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.3.3)':
+  '@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.5.3)':
     dependencies:
       '@babel/generator': 7.26.2
       '@babel/parser': 7.26.2
       '@babel/traverse': 7.25.9
       '@babel/types': 7.26.0
-      prettier: 3.3.3
-      semver: 7.6.3
+      prettier: 3.5.3
+      semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
 
@@ -1714,6 +1794,8 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@pkgr/core@0.2.7': {}
 
   '@rollup/rollup-android-arm-eabi@4.27.2':
     optional: true
@@ -1768,6 +1850,13 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.27.2':
     optional: true
+
+  '@shahrad/prettier-config@1.2.2(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.5.3))(prettier-plugin-packagejson@2.5.15(prettier@3.5.3))(prettier-plugin-sh@0.15.0(prettier@3.5.3))(prettier@3.5.3)':
+    dependencies:
+      '@ianvs/prettier-plugin-sort-imports': 4.4.0(prettier@3.5.3)
+      prettier: 3.5.3
+      prettier-plugin-packagejson: 2.5.15(prettier@3.5.3)
+      prettier-plugin-sh: 0.15.0(prettier@3.5.3)
 
   '@sindresorhus/tsconfig@6.0.0': {}
 
@@ -2001,6 +2090,10 @@ snapshots:
 
   deep-is@0.1.4: {}
 
+  detect-indent@7.0.1: {}
+
+  detect-newline@4.0.1: {}
+
   diff@5.2.0: {}
 
   doctrine@3.0.0:
@@ -2161,6 +2254,10 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.2
 
+  fdir@6.4.6(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
   file-entry-cache@6.0.1:
     dependencies:
       flat-cache: 3.2.0
@@ -2199,6 +2296,8 @@ snapshots:
   get-tsconfig@4.8.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
+
+  git-hooks-list@4.1.1: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -2279,6 +2378,8 @@ snapshots:
   is-path-inside@3.0.3: {}
 
   is-plain-obj@2.1.0: {}
+
+  is-plain-obj@4.1.0: {}
 
   is-unicode-supported@0.1.0: {}
 
@@ -2384,6 +2485,8 @@ snapshots:
 
   ms@2.1.3: {}
 
+  mvdan-sh@0.10.1: {}
+
   mz@2.7.0:
     dependencies:
       any-promise: 1.3.0
@@ -2463,7 +2566,20 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.3.3: {}
+  prettier-plugin-packagejson@2.5.15(prettier@3.5.3):
+    dependencies:
+      sort-package-json: 3.2.1
+      synckit: 0.11.8
+    optionalDependencies:
+      prettier: 3.5.3
+
+  prettier-plugin-sh@0.15.0(prettier@3.5.3):
+    dependencies:
+      mvdan-sh: 0.10.1
+      prettier: 3.5.3
+      sh-syntax: 0.4.2
+
+  prettier@3.5.3: {}
 
   punycode@2.3.1: {}
 
@@ -2525,9 +2641,15 @@ snapshots:
 
   semver@7.6.3: {}
 
+  semver@7.7.2: {}
+
   serialize-javascript@6.0.2:
     dependencies:
       randombytes: 2.1.0
+
+  sh-syntax@0.4.2:
+    dependencies:
+      tslib: 2.8.1
 
   shebang-command@2.0.0:
     dependencies:
@@ -2536,6 +2658,18 @@ snapshots:
   shebang-regex@3.0.0: {}
 
   signal-exit@4.1.0: {}
+
+  sort-object-keys@1.1.3: {}
+
+  sort-package-json@3.2.1:
+    dependencies:
+      detect-indent: 7.0.1
+      detect-newline: 4.0.1
+      git-hooks-list: 4.1.1
+      is-plain-obj: 4.1.0
+      semver: 7.7.2
+      sort-object-keys: 1.1.3
+      tinyglobby: 0.2.14
 
   source-map-js@1.2.1:
     optional: true
@@ -2584,6 +2718,10 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
+  synckit@0.11.8:
+    dependencies:
+      '@pkgr/core': 0.2.7
+
   text-table@0.2.0: {}
 
   thenify-all@1.6.0:
@@ -2601,6 +2739,11 @@ snapshots:
       fdir: 6.4.2(picomatch@4.0.2)
       picomatch: 4.0.2
 
+  tinyglobby@0.2.14:
+    dependencies:
+      fdir: 6.4.6(picomatch@4.0.2)
+      picomatch: 4.0.2
+
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
@@ -2616,6 +2759,8 @@ snapshots:
       typescript: 5.6.3
 
   ts-interface-checker@0.1.13: {}
+
+  tslib@2.8.1: {}
 
   tsup@8.3.5(postcss@8.4.49)(tsx@4.19.2)(typescript@5.6.3):
     dependencies:
