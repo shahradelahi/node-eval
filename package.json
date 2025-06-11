@@ -44,7 +44,7 @@
   "prettier": "@shahrad/prettier-config",
   "devDependencies": {
     "@shahrad/prettier-config": "^1.2.2",
-    "@sindresorhus/tsconfig": "^6.0.0",
+    "@sindresorhus/tsconfig": "^7.0.0",
     "@types/chai": "^5.0.1",
     "@types/mocha": "^10.0.9",
     "@types/node": "^22.9.0",
