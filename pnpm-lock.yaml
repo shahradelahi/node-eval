@@ -11,9 +11,9 @@ importers:
       '@shahrad/prettier-config':
         specifier: ^1.2.2
         version: 1.2.2(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.5.3))(prettier-plugin-packagejson@2.5.15(prettier@3.5.3))(prettier-plugin-sh@0.15.0(prettier@3.5.3))(prettier@3.5.3)
-      '@sindresorhus/tsconfig':
-        specifier: ^6.0.0
-        version: 6.0.0
+      '@shahrad/tsconfig':
+        specifier: ^1.1.0
+        version: 1.1.0
       '@types/chai':
         specifier: ^5.0.1
         version: 5.0.1
@@ -549,8 +549,8 @@ packages:
       prettier-plugin-packagejson: ^2.5
       prettier-plugin-sh: ^0.15
 
-  '@sindresorhus/tsconfig@6.0.0':
-    resolution: {integrity: sha512-+fUdfuDd/7O2OZ9/UvJy76IEWn2Tpvm2l+rwUoS2Yz4jCUTSNOQQv2PLWrwekt8cPLwHmpHaBpay34bkBmVl2Q==}
+  '@shahrad/tsconfig@1.1.0':
+    resolution: {integrity: sha512-WcziTJWK7DC49kbEKPwdZ/Mnhu3H6ZehpBg4UGbyDwU2Ze/QvSjZq1Nx6Vb2Pfgwjas1CHWkIA2d3GiW35fxsw==}
     engines: {node: '>=18'}
 
   '@types/chai@5.0.1':
@@ -1858,7 +1858,7 @@ snapshots:
       prettier-plugin-packagejson: 2.5.15(prettier@3.5.3)
       prettier-plugin-sh: 0.15.0(prettier@3.5.3)
 
-  '@sindresorhus/tsconfig@6.0.0': {}
+  '@shahrad/tsconfig@1.1.0': {}
 
   '@types/chai@5.0.1':
     dependencies:
